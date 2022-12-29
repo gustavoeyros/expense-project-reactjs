@@ -17,7 +17,7 @@ const Expenses = (props) =>{
           {props.info.filter((value)=>{
            return value.date.getFullYear() === getYear
           }).map((value)=>{
-          return <ExpenseItem title={value.title} amount={value.amount} date={value.date}/>
+          return <ExpenseItem key={value.id} title={value.title} amount={value.amount} date={value.date}/>
           })} 
         </Card>
       );
